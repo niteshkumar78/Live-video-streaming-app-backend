@@ -42,6 +42,9 @@ app.use(express.json({ limit: "50mb" }));
 
 // app.use(express.static(__dirname + "/img"));
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 app.post("/get-stream/", upload.single("file"), async (req, res) => {
   //   console.log(req.body.data);
   // console.log(req.body.userId);
